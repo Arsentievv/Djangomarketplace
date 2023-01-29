@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Items List</title>
+</head>
+<body>
+    <h1>Items list:</h1>
+
+    {% for shop in shop_list %}
+    <ul>
+        <li><h3>{{ shop.title }}:</h3></li>
+    </ul>
+        <h3>Items:</h3>
+        {% for item in shop.item.all %}
+            <ul>
+                <li>
+                    <h4>Item title: <a href="{% url 'item_detail' pk=item.id %}">{{ item.title }}</a></h4>
+                    Item description: {{ item.description }}.<br>
+                    Item amount: {{ item.amt }} <br>
+                    Item price: {{ item.price }}<br>
+                </li>
+            </ul>
+        {% endfor %}
+    <br>
+    {% endfor %}
+
+
+</body>
+</html>

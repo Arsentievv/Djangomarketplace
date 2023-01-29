@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Balance Replenish</title>
+</head>
+<body>
+    <h1>Balance Replenish:</h1>
+    <h3>Your balance: {{ balance }}</h3>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Ok</button>
+    </form>
+</body>
+</html>

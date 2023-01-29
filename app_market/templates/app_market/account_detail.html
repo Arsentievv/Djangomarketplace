@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Profile Detail</title>
+</head>
+<body>
+    <h1>Profile Detail:</h1>
+    <ul>
+        <li>Name: {{ user_detail.username }}</li>
+        <li>Balance: {{ user_detail.profile.balance }}</li>
+        <li><a href="/market/account_detail/balance/">Replenish the balance</a></li>
+        <li>Status: {{ user_detail.profile.status }}</li>
+        <h2>Buy history:</h2>
+
+            {% for item in history %}
+            <ul>
+                <li>
+                    Item title: {{ item.item.title }}<br>
+                    Date of buy: {{ item.date }}<br>
+                    Quantity: {{ item.quantity }}<br><br>
+                    {{ item.history }}
+                </li>
+            </ul>
+            {% endfor %}
+
+
+
+    </ul>
+
+</body>
+</html>

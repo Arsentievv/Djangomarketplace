@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Item Deatil</title>
+</head>
+<body>
+    <h1>{{ item.title }} detail:</h1>
+    <ul>
+        <li>Title: {{ item.title }}</li>
+        <li>Description: {{ item.description }}</li>
+        <li>Price: {{ item.price }}</li>
+        <li>
+            Add to cart:
+            <form method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit">Add</button>
+            </form>
+        </li>
+    </ul>
+
+</body>
+</html>

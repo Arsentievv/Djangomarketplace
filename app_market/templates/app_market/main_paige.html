@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Main Paige</title>
+</head>
+<body>
+    {% if request.user.is_authenticated %}
+        <h1>Wellcome, {{ request.user.username }}</h1>
+        <h2>Site menu</h2><br>
+        <ul>
+            <li><a href="{% url 'account_detail'%}">My account</a></li>
+            <li><a href="{% url 'item_list'%}">Items list</a></li>
+            <li><a href="{% url 'cart' %}">Your cart</a></li>
+            <li><a href="{% url 'report' %}">Best sellers</a></li>
+            <li><a href="/auth/logout/">Exit</a></li>
+        </ul>
+    {% else %}
+        <h2>You need to:</h2>
+        <ul>
+            <li><a href="/auth/login/">Log in</a></li>
+            <li><a href="/auth/registration/">Registrate</a></li>
+        </ul>
+    {% endif %}
+
+</body>
+</html>

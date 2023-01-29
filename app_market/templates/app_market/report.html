@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Selling report</title>
+</head>
+<body>
+    <h1>Selling report:</h1>
+    <h2>Our best sellers are:</h2>
+    {% for item in best_sellers %}
+        <ul>
+            <li>
+                Title: <a href="{% url 'item_detail' pk=item.item.id %}">{{ item.item.title }}</a><br>
+                Item id: {{ item.item.id }}<br>
+                Selling times: {{ item.item.sell_amt }} times <br>
+                Date: {{ item.date }}<br>
+                User: {{ item.user}}
+            </li>
+        </ul>
+    {% endfor %}
+
+
+
+</body>
+</html>
