@@ -18,6 +18,6 @@ I am a Backend Developer <img src="https://media.giphy.com/media/WUlplcMpOCEmTGB
   <img src="https://github.com/devicons/devicon/blob/master/icons/mysql/mysql-original.svg" title="MySQL" alt="MySQL" width="40" height="40"/>&nbsp;
 
 
-# Ghjtrn htfkbpjdfk 
+# Market place 
 Реализованы функции регистрации/аутентификации пользователя. Личный кабинет с возможностью пополнения баланса, повышения уровня пользователя и просмотра истории покупок. 
 Добавление магазинов и товаров. Просмотр списка магазинов и списка товаров в них. Возможность добавить товар в магазин и оформить заказ.
